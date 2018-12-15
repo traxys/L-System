@@ -1,0 +1,7 @@
+obj/lsystem.o: src/lsystem.cpp include/lsystem.hpp
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+obj/main.o: src/main.cpp include/lsystem.hpp include/fern.hpp \
+ include/lsystem.hpp
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+obj/drawer.o: src/drawer.cpp include/drawer.hpp include/lsystem.hpp
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
